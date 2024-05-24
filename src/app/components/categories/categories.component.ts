@@ -7,10 +7,9 @@ import Category from '../../models/category.model'
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-
+  readonly VISIBLE_CATEGORIES = 14;
   categories: Category[] = [];
   currentIndex = 0;
-  visibleCategories = 14; 
   totalCategories = 0;
   translateValue = '0px'; 
   direction = 'prev';
@@ -31,7 +30,7 @@ export class CategoriesComponent implements OnInit {
     const slideWidth = 65;
         
     const startIndex = this.currentIndex;
-    let endIndex = this.currentIndex + this.visibleCategories;
+    let endIndex = this.currentIndex + this.VISIBLE_CATEGORIES;
 
     if(this.currentIndex >= 0 && endIndex <= (this.totalCategories - 1)) {
         this.direction = 'next';
@@ -39,7 +38,7 @@ export class CategoriesComponent implements OnInit {
     } 
     else if(endIndex >= this.totalCategories - 1) {
       this.direction = 'prev';
-      this.currentIndex -= (this.visibleCategories - 1)
+      this.currentIndex -= (this.VISIBLE_CATEGORIES - 1)
     }    
   
     // Calcular translateValue basado en el índice del ngFor
