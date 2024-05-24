@@ -1,0 +1,52 @@
+@import url('../../../styles.css');
+
+.categories-header {
+  margin-bottom: 20px; 
+  width: 90%;
+}
+
+.categories-card {
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  width: 6rem;
+  height: max-content;
+}
+
+.slider {
+  flex-wrap: wrap;
+  gap: 5px;
+  transition: transform 2s ease;
+  overflow: hidden;
+  height: max-content;
+}
+
+.categories-card svg {
+  border-radius: 50%;
+  background-color: var(--background-color);
+  width: 2.5rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.categories-card span {
+  font-size: x-small;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-wrap: wrap;
+}
+
+.nav-btn {
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+.transition{
+  transition: transform 0.7s;
+}
+
+
